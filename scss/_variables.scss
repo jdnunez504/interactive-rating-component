@@ -1,0 +1,9 @@
+$clr-bd-bg: hsl(218, 11%, 8%); // V.D.Blue
+$clr-sel-bg: hsl(213, 19%, 18%); // D. Blue 1
+$clr-acc: hsl(25, 97%, 53%); // Orange
+$clr-p-txt: hsl(216, 12%, 63%); // L. Grey
+$clr-sel-txt: hsl(217, 12%, 54%); // Med. Grey
+$clr-hd-txt: hsl(0, 0%, 100%); // Pure White
+$clr-crd-bg-1: hsl(215, 20%, 17%); // D. Blue 2
+$clr-crd-bg-2: hsl(215, 24%, 12%); // D. Blue 3
+$clr-main: radial-gradient(98.96% 98.96% at 50% 0%, $clr-crd-bg-1, $clr-crd-bg-2);
