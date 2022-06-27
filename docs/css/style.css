@@ -119,7 +119,10 @@ form {
 
 input[type=radio] {
   display: none;
-  opacity: 0;
+}
+
+input[type=radio]:checked + label {
+  background-color: orange;
 }
 
 label {
