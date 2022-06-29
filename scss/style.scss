@@ -1,97 +1,56 @@
 @import 'reset';
-@import 'config';
 @import 'variables';
-
 
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: $clr-bd-bg;
+    background-color: $clr-bg-1;
     font-family: 'Overpass', sans-serif;
 }
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card {
+    background: $clr-bg-grd;
+    width: 20.4375rem;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
 }
-
-input[type='radio'] {
-    display: none;
-}
-
-input[type='radio']:checked + label {
-    background-color: $clr-sel-act;
-    color: white;
-}
-
-label {
-    display: inline-block;
-    background-color: $clr-sel-bg;
-    color: $clr-sel-txt;
-    line-height: 2.65rem;
-    height: 2.65rem;
-    width: 2.65rem;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-label:hover {
-    background-color: $clr-sel-hov;
-    color: white;
-}
-
-h2 {
-    font-size: $fs-hd-mb;
-    color: $clr-hd-txt;
-    line-height: 1;
-    margin-bottom: 1.25rem;
-}
-
-p {
-    font-size: $fs-p-mb;
-    color: $clr-p-txt;
-    margin-bottom: 1.875rem;
-}
-
-.button--submit {
-    background-color: $clr-acc;
-    width: 100%;
-    font-size: $fs-btn-mb;
-    padding: $fs-btn-mb;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: $clr-hd-txt;
-    border-radius: 35px;
-    border: none;
-    cursor: pointer;
-}
-
-.button--submit:hover {
-    background-color: white;
-    color: $clr-acc;
-}
-
-.logo {
+.icon-box {
     display: inline-block;
     position: relative;
-    background-color: $clr-sel-bg;
+    background-color: $clr-bg-2;
     height: 40px;
     width: 40px;
     border-radius: 50%;
     margin-bottom: 1rem;
 }
-
-.logo > img {
+.icon {
     height: 14px;
     width: 14px;
     position: relative;
     top: 13px;
     left: 14px;
 }
-
+.title {
+    font-size: $fs-h1-mb;
+    color: $clr-neut-1;
+    font-weight: $fw-bold;
+    line-height: 1.875;
+    margin-bottom: 1.25rem;
+}
+.copy {
+    font-size: $fs-p-mb;
+    font-weight: $fw-reg;
+    color: $clr-neut-2;
+    margin-bottom: 1.875rem;
+    line-height: 1.375;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .ratings {
     width: 100%;
     display: flex;
@@ -99,43 +58,166 @@ p {
     justify-content: space-between;
     margin-bottom: 1.5rem;
 }
-
-.card {
-    background: $clr-main;
-    width: 20.4375rem;
-    margin: 0 auto;
-    padding: 1.5rem;
-    padding-bottom: 2rem;
-    border-radius: 25px;
+.rd-btn {
+    display: none;
 }
-
-.submit p {
+.rd-btn:checked + .spot-box > .spot {
+    background-color: $clr-acc;
+    color: $clr-neut-1;
+}
+.spot {
+    font-size: $fs-rd-mb;
+    font-weight: $fw-bold;
+    display: inline-block;
+    background-color: $clr-bg-2;
+    color: $clr-neut-2;
+    line-height: 2.65rem;
+    height: 2.65rem;
+    width: 2.65rem;
     text-align: center;
-    margin-bottom: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s;
 }
-
-.submit .card{
+.spot:hover {
+    background-color: $clr-neut-3;
+    color: $clr-neut-1;
+}
+.btn {
+    background-color: $clr-acc;
+    width: 100%;
+    font-size: $fs-btn-mb;
+    padding: $fs-btn-mb;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    color: $clr-neut-1;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.btn:hover {
+    background-color: $clr-neut-1;
+    color: $clr-acc;
+}
+.card--submit{
+    background: $clr-bg-grd;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 20.4375rem;
+    margin: 0 auto;
     padding-top: 2.125rem; 
-}
-
-.score {
-    background-color: $clr-sel-bg;
-    display: inline-block;
-    text-align: center;
-    height: 2rem;
-    width: 10.5rem;
-    line-height: 2.25rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     border-radius: 25px;
-    color: $clr-acc;
-    font-size: 0.875rem;
-    margin-bottom: 1.5rem;
 }
-
-.image--submitted {
+.image--submit {
     width: 9rem;
     height: 6rem;
     margin-bottom: 1.5rem;
 }
+.txt-box {
+    background-color: $clr-bg-2;
+    height: 2rem;
+    width: 10.5rem;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+}
+.txt {
+    color: $clr-acc;
+    text-align: center;
+    line-height: 2.25rem;
+    font-size: $fs-p-mb;
+}
+.title--submit {
+    font-size: $fs-h1-mb;
+    font-weight: $fw-bold;
+    color: $clr-neut-1;
+    line-height: 1.875;
+    margin-bottom: 0.625rem;
+}
+.copy--submit {
+    font-size: $fs-p-mb;
+    font-weight: $fw-reg;
+    color: $clr-neut-2;
+    line-height: 1.375;
+    text-align: center;
+}
+
+@media (min-width: 50rem) {
+    .card {
+        width: 25.75rem;
+    }
+    .title {
+        font-size: $fs-h1-dt;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+    }
+    .copy {
+        font-size: $fs-p-dt;
+        line-height: 1.5;
+        margin-bottom: 1.875rem;
+    }
+    .icon-box {
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+    }
+    .icon {
+        height: 16.67px;
+        width: 16px;
+        top: 15px;
+        left: 16px;
+    }
+    .ratings {
+        margin-bottom: 2rem;
+    }
+    .spot {
+        font-size: $fs-rd-dt;
+        line-height: 3.1875rem;
+        height: 3.1875rem;
+        width: 3.1875rem;
+    }
+    .btn {
+        font-size: $fs-btn-dt;
+        line-height: 1.1875;
+        padding-top: 0.6875rem;
+        padding-bottom: 0.6875rem;
+    }
+    .card--submit {
+        width: 25.75rem;
+        padding-top: 2.8125rem;
+        padding-bottom: 2.8125rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .image--submit {
+        width: 10.125rem;
+        height: 6.75rem;
+        margin-bottom: 2rem;
+    }
+    .txt-box {
+        height: 2rem;
+        width: 12.065rem;
+        border-radius: 25px;
+        margin-bottom: 2rem;
+    }
+    .txt {
+        font-size: $fs-p-dt;
+        line-height: 2.25;
+        letter-spacing: 0.15px;
+    }
+    .title--submit {
+        letter-spacing: 0.5px;
+    }
+    .copy--submit {
+        font-size: $fs-p-dt;
+        letter-spacing: 0.15px;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+

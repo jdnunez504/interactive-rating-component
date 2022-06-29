@@ -75,42 +75,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-/*
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-@mixin transition-ease {
-    transition: all 0.5s ease-in-out;
-}
-
-@function set-text-color($color) {
-    @if (lightness($color) > 40%) {
-        @return #000;
-    } @else {
-        @return #fff;
-    }
-}
-
-@mixin media-md {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-}
-@mixin media-lg {
-    @media screen and (min-width: 1024px) {
-        @content;
-    }
-}
-@mixin media-xl {
-    @media screen and (min-width: 1600px) {
-        @content;
-    }
-}
-*/
 body {
   display: flex;
   flex-direction: column;
@@ -119,70 +83,16 @@ body {
   font-family: "Overpass", sans-serif;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, hsl(215deg, 20%, 17%), hsl(215deg, 24%, 12%));
+  width: 20.4375rem;
+  border-radius: 25px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
 }
 
-input[type=radio] {
-  display: none;
-}
-
-input[type=radio]:checked + label {
-  background-color: hsl(25deg, 97%, 53%);
-  color: white;
-}
-
-label {
-  display: inline-block;
-  background-color: hsl(213deg, 19%, 18%);
-  color: hsl(217deg, 12%, 54%);
-  line-height: 2.65rem;
-  height: 2.65rem;
-  width: 2.65rem;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-label:hover {
-  background-color: hsl(217deg, 12%, 54%);
-  color: white;
-}
-
-h2 {
-  font-size: 1.5rem;
-  color: hsl(0deg, 0%, 100%);
-  line-height: 1;
-  margin-bottom: 1.25rem;
-}
-
-p {
-  font-size: 0.875rem;
-  color: hsl(216deg, 12%, 63%);
-  margin-bottom: 1.875rem;
-}
-
-.button--submit {
-  background-color: hsl(25deg, 97%, 53%);
-  width: 100%;
-  font-size: 0.875rem;
-  padding: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: hsl(0deg, 0%, 100%);
-  border-radius: 35px;
-  border: none;
-  cursor: pointer;
-}
-
-.button--submit:hover {
-  background-color: white;
-  color: hsl(25deg, 97%, 53%);
-}
-
-.logo {
+.icon-box {
   display: inline-block;
   position: relative;
   background-color: hsl(213deg, 19%, 18%);
@@ -192,12 +102,34 @@ p {
   margin-bottom: 1rem;
 }
 
-.logo > img {
+.icon {
   height: 14px;
   width: 14px;
   position: relative;
   top: 13px;
   left: 14px;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  line-height: 1.875;
+  margin-bottom: 1.25rem;
+}
+
+.copy {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: hsl(216deg, 12%, 63%);
+  margin-bottom: 1.875rem;
+  line-height: 1.375;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ratings {
@@ -208,42 +140,189 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.card {
-  background: radial-gradient(98.96% 98.96% at 50% 0%, hsl(215deg, 20%, 17%), hsl(215deg, 24%, 12%));
-  width: 20.4375rem;
-  margin: 0 auto;
-  padding: 1.5rem;
-  padding-bottom: 2rem;
-  border-radius: 25px;
+.rd-btn {
+  display: none;
 }
 
-.submit p {
+.rd-btn:checked + .spot-box > .spot {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.spot {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  display: inline-block;
+  background-color: hsl(213deg, 19%, 18%);
+  color: hsl(216deg, 12%, 63%);
+  line-height: 2.65rem;
+  height: 2.65rem;
+  width: 2.65rem;
   text-align: center;
-  margin-bottom: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
-.submit .card {
+.spot:hover {
+  background-color: hsl(217deg, 12%, 54%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.btn {
+  background-color: hsl(25deg, 97%, 53%);
+  width: 100%;
+  font-size: 0.875rem;
+  padding: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+
+.card--submit {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, hsl(215deg, 20%, 17%), hsl(215deg, 24%, 12%));
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 20.4375rem;
+  margin: 0 auto;
   padding-top: 2.125rem;
-}
-
-.score {
-  background-color: hsl(213deg, 19%, 18%);
-  display: inline-block;
-  text-align: center;
-  height: 2rem;
-  width: 10.5rem;
-  line-height: 2.25rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   border-radius: 25px;
-  color: hsl(25deg, 97%, 53%);
-  font-size: 0.875rem;
-  margin-bottom: 1.5rem;
 }
 
-.image--submitted {
+.image--submit {
   width: 9rem;
   height: 6rem;
   margin-bottom: 1.5rem;
+}
+
+.txt-box {
+  background-color: hsl(213deg, 19%, 18%);
+  height: 2rem;
+  width: 10.5rem;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+}
+
+.txt {
+  color: hsl(25deg, 97%, 53%);
+  text-align: center;
+  line-height: 2.25rem;
+  font-size: 0.875rem;
+}
+
+.title--submit {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+  line-height: 1.875;
+  margin-bottom: 0.625rem;
+}
+
+.copy--submit {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: hsl(216deg, 12%, 63%);
+  line-height: 1.375;
+  text-align: center;
+}
+
+@media (min-width: 50rem) {
+  .card {
+    width: 25.75rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+  }
+
+  .copy {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-bottom: 1.875rem;
+  }
+
+  .icon-box {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    height: 16.67px;
+    width: 16px;
+    top: 15px;
+    left: 16px;
+  }
+
+  .ratings {
+    margin-bottom: 2rem;
+  }
+
+  .spot {
+    font-size: 1rem;
+    line-height: 3.1875rem;
+    height: 3.1875rem;
+    width: 3.1875rem;
+  }
+
+  .btn {
+    font-size: 0.9375rem;
+    line-height: 1.1875;
+    padding-top: 0.6875rem;
+    padding-bottom: 0.6875rem;
+  }
+
+  .card--submit {
+    width: 25.75rem;
+    padding-top: 2.8125rem;
+    padding-bottom: 2.8125rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .image--submit {
+    width: 10.125rem;
+    height: 6.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .txt-box {
+    height: 2rem;
+    width: 12.065rem;
+    border-radius: 25px;
+    margin-bottom: 2rem;
+  }
+
+  .txt {
+    font-size: 0.9375rem;
+    line-height: 2.25;
+    letter-spacing: 0.15px;
+  }
+
+  .title--submit {
+    letter-spacing: 0.5px;
+  }
+
+  .copy--submit {
+    font-size: 0.9375rem;
+    letter-spacing: 0.15px;
+    line-height: 1.5;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
