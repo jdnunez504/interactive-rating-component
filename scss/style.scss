@@ -1,7 +1,15 @@
-@use 'reset';
-@use 'variables';
-@use 'config';
+@import 'reset';
+@import 'config';
+@import 'variables';
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $clr-bd-bg;
+    font-family: 'Overpass', sans-serif;
+}
 
 form {
     display: flex;
@@ -14,15 +22,74 @@ input[type='radio'] {
 }
 
 input[type='radio']:checked + label {
-    background-color: orange;
+    background-color: $clr-sel-act;
+    color: white;
 }
 
 label {
-    line-height: 0.5;
-    padding: 1.5rem;
-    border: 2px solid black;
-    border-radius: 35px;
+    display: inline-block;
+    background-color: $clr-sel-bg;
+    color: $clr-sel-txt;
+    line-height: 2.65rem;
+    height: 2.65rem;
+    width: 2.65rem;
+    text-align: center;
+    border-radius: 50%;
     cursor: pointer;
+}
+
+label:hover {
+    background-color: $clr-sel-hov;
+    color: white;
+}
+
+h2 {
+    font-size: $fs-hd-mb;
+    color: $clr-hd-txt;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+}
+
+p {
+    font-size: $fs-p-mb;
+    color: $clr-p-txt;
+    margin-bottom: 1.875rem;
+}
+
+.button--submit {
+    background-color: $clr-acc;
+    width: 100%;
+    font-size: $fs-btn-mb;
+    padding: $fs-btn-mb;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $clr-hd-txt;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+.button--submit:hover {
+    background-color: white;
+    color: $clr-acc;
+}
+
+.logo {
+    display: inline-block;
+    position: relative;
+    background-color: $clr-sel-bg;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.logo > img {
+    height: 14px;
+    width: 14px;
+    position: relative;
+    top: 13px;
+    left: 14px;
 }
 
 .ratings {
@@ -30,10 +97,45 @@ label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 1.5rem;
 }
 
 .card {
-    width: 50%;
+    background: $clr-main;
+    width: 20.4375rem;
     margin: 0 auto;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+    border-radius: 25px;
 }
 
+.submit p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.submit .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.125rem; 
+}
+
+.score {
+    background-color: $clr-sel-bg;
+    display: inline-block;
+    text-align: center;
+    height: 2rem;
+    width: 10.5rem;
+    line-height: 2.25rem;
+    border-radius: 25px;
+    color: $clr-acc;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.image--submitted {
+    width: 9rem;
+    height: 6rem;
+    margin-bottom: 1.5rem;
+}

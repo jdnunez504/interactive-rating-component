@@ -1,22 +1,22 @@
-$clr-bd-bg: hsl(218, 11%, 8%); // V. D.Blue
-$clr-sel-bg: hsl(213, 19%, 18%); // D. Blue 1
-$clr-acc: hsl(25, 97%, 53%); // Orange
-$clr-p-txt: hsl(216, 12%, 63%); // L. Grey
-$clr-sel-txt: hsl(217, 12%, 54%); // Med. Grey
-$clr-hd-txt: hsl(0, 0%, 100%); // Pure White
-$clr-crd-bg-1: hsl(215, 20%, 17%); // D. Blue 2
-$clr-crd-bg-2: hsl(215, 24%, 12%); // D. Blue 3
+$clr-bd-bg: hsl(218, 11%, 8%);
+$clr-sel-bg: hsl(213, 19%, 18%);
+$clr-acc: hsl(25, 97%, 53%);
+$clr-p-txt: hsl(216, 12%, 63%);
+$clr-sel-txt: hsl(217, 12%, 54%);
+$clr-hd-txt: hsl(0, 0%, 100%);
+$clr-crd-bg-1: hsl(215, 20%, 17%);
+$clr-crd-bg-2: hsl(215, 24%, 12%);
 $clr-main: radial-gradient(98.96% 98.96% at 50% 0%, $clr-crd-bg-1, $clr-crd-bg-2);
-$clr-sel-hov: hsl(217, 12%, 54%); // Med. Grey
-$clr-sel-act: hsl(25, 97%, 53%); // Orange
-/////
+$clr-sel-hov: hsl(217, 12%, 54%);
+$clr-sel-act: hsl(25, 97%, 53%);
+
 $fs-hd-mb: 1.5rem;
 $fs-hd-dt: 1.75rem;
 $fs-sel-mb: 0.9375rem;
 $fs-sel-dt: 1rem;
 $fs-p-mb: 0.875rem;
 $fs-p-dt: 0.9375rem;
-/////
+$fs-btn-mb: 0.875rem;
+
 $fw-bold: 700;
 $fw-reg: 400;
-////
